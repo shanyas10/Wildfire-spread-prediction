@@ -8,6 +8,14 @@ near-future wildfire spread based on historical fire data.
 
 ## Problem Formulation
 To formulate the problem mathematically, given a climate video X of length T with the each frame X<sub>i</sub> representing a 2D image with pixels representing burned areas 
-(y<sub>i</sub><sup>(j,k)</sup> $ \epsilon $ {0,1}) along with geographical and atmospheric data for i ranging from 0 to T-1, the goal is to predict the areas surrounding the current fire that are expected
-to burn (change in the value of pixels y<sup>j,k</sup> i ) in the subsequent n frames for i = T, ... T+n-1.
+(y<sub>i</sub><sup>(j,k)</sup> in {0,1}) along with geographical and atmospheric data for i ranging from 0 to T-1, the goal is to predict the areas surrounding the current fire that are expected
+to burn (change in the value of pixels y<sub>i</sub><sup>j,k</sup>) in the subsequent n frames for i = T, ... T+n-1.
 The ground truth y<sub>i</sub> is a 2-D matrix for i<sup>th</sup> time interval with each cell y<sub>i</sub><sup>j,k</sup>, i representing a pixel at jth row and kth column with value {1,0} representing burn.
+
+## Data
+
+* [Historical fire perimeters provided by GeoMAC](https://rmgsc.cr.usgs.gov/outgoing/GeoMAC)
+* [Landsat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8)
+* [Sentinel 1](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar)
+* [National Oceanic and Atmospheric Administration (NOAA) data](https://www.ncdc.noaa.gov/) 
+
